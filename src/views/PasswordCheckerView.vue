@@ -130,36 +130,33 @@
   </div>
   </div>
     
-    <div class="block">
-      <div>Base Score: {{ BaseScore }}</div>
-      <div>Length Bonus: {{ LengthBonus }} 
-        [<span v-if="this.password.length >= minimumLength">{{ this.password.length - minimumLength }}</span>
-        <span v-else>0</span>x{{ bonus.excess }}]
-      </div>
-      <div>Uppercase Bonus: {{ UpperCaseBonus }}[{{ num.upper}}X{{ bonus.upperCase }}]</div>
-      <div>Number Bonus: {{ NumberBonus }}[{{ num.numbers}}X{{ bonus.numbers }}]</div>
-      <div>Symbol Bonus: {{ SymbolBonus }}[{{ num.symbols}}X{{ bonus.symbols }}]</div>
-      <div>Combination Bonus: {{ ComboBonus }} </div>
-      <div>Lowercase only penalty: {{ LowerCase }}</div>
-      <div>Numbers only penalty: {{ OnlyNumbers }}</div>
-      <div>Repeating pattern penalty: {{ RepeatingPattern }}</div>
-      <div>Total Score:
-        <span v-if="this.password.length < minimumLength">0</span>
-        <span v-else>
-          <!-- {{ BaseScore + LengthBonus + UpperCaseBonus + NumberBonus + SymbolBonus + LowerCase + OnlyNumbers + ComboBonus + RepeatingPattern }} -->
-          {{ TotalScore }}
-        </span>
-      </div>
+  <div class="block">
+    <div>Base Score: {{ BaseScore }}</div>
+    <div>Length Bonus: {{ LengthBonus }} 
+      [<span v-if="this.password.length >= minimumLength">{{ this.password.length - minimumLength }}</span>
+      <span v-else>0</span>x{{ bonus.excess }}]
     </div>
+    <div>Uppercase Bonus: {{ UpperCaseBonus }}[{{ num.upper}}X{{ bonus.upperCase }}]</div>
+    <div>Number Bonus: {{ NumberBonus }}[{{ num.numbers}}X{{ bonus.numbers }}]</div>
+    <div>Symbol Bonus: {{ SymbolBonus }}[{{ num.symbols}}X{{ bonus.symbols }}]</div>
+    <div>Combination Bonus: {{ ComboBonus }} </div>
+    <div>Lowercase only penalty: {{ LowerCase }}</div>
+    <div>Numbers only penalty: {{ OnlyNumbers }}</div>
+    <div>Repeating pattern penalty: {{ RepeatingPattern }}</div>
+    <div>Total Score:
+      <span v-if="this.password.length < minimumLength">0</span>
+      <span v-else>
+        <!-- {{ BaseScore + LengthBonus + UpperCaseBonus + NumberBonus + SymbolBonus + LowerCase + OnlyNumbers + ComboBonus + RepeatingPattern }} -->
+        {{ TotalScore }}
+      </span>
+    </div>
+  </div>
 
   </main>
 </template>
 
 <style>
 input {
-  width: 400px;
-  margin: 2rem 0 0.1rem 0;
-  padding: 0.2rem;
   font-size: 1.5rem;
   font-family: "Lato";
   outline: none;
@@ -167,19 +164,13 @@ input {
   border-bottom: 2px solid black;
 }
 #container {
-  width: 800px;
-  margin: 0 auto;
-  padding: 50px 0 0 0;
+
 }
 .block {
-  width: 400px;
-  margin: 0 auto;
+
 }
 #complexity,
 #results {
-  width: 400px;
-  padding: 3px 0;
-  height: 40px;
   color: #000;
   font-size: 1.25rem;
   text-align: center;
@@ -187,10 +178,7 @@ input {
   font-weight: bold;
 }
 div#complexity {
-  width: fit-content;
-  padding: 0.1rem 0.5rem;
-  font-size: 1rem;
-  text-transform: uppercase;
+
 }
 #results {
   margin: 30px 0 20px 0;
